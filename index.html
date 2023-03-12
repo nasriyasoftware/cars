@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="{{docLang}}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{Title}}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Roboto:ital,wght@1,100&family=Work+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;1,200;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+            * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+:root {
+    --textDirection: ltr;
+    --main-color :#0f52ba;
+    --main-color-dark: #002e5d;
+    --alt-color:#ee4266;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ------------------ */
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+
+
+
+/* Start Header */
+
+body{
+    background-color: #d7d7d7;
+    font-family: "Cairo", sans-serif;
+    direction: var(--textDirection);
+}
+
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.logo{
+    display: flex;
+}
+.logo img{
+    width: 35%;
+    margin: 0px 0 10px;
+}
+
+.content hr{
+    width: calc(100% + 105px);
+    margin-left: -35px;
+    margin-right: -35px;
+    border: solid 1px #d7d7d7;
+}
+
+.content{
+    margin: 30px 0;
+    background-color: white;
+    width: 100%;
+    padding: 35px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: var(--main-color-dark);
+    overflow: hidden;
+}
+
+.content .e-title h3{
+    margin: 10px auto 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--alt-color);
+}
+
+.intro p{
+    margin: 5px 0 25px;
+}
+
+.verify{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 35px 0;
+}
+
+.v-code{
+    text-align: center;
+    /* margin: 10px auto; */
+    width: 200px;
+    font-size: 20px;
+    color: var(--main-color);
+    letter-spacing: 1px;
+    background-color: rgb(15 82 186 / 12%);
+    border-radius: 4px;
+    border: solid 1px var(--main-color);
+    position: relative;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.v-code::after{
+    position: absolute;
+    content: attr(content);
+    bottom: -25px;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--alt-color);
+    letter-spacing: normal;
+}
+.v-email{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-bottom: 30px */
+}
+
+.or{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 30px;
+    color: var(--alt-color);
+}
+
+.v-email .button a{
+    color: white;
+    font-size: 18px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    width: 200px;
+    display: block;
+    text-align: center;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.v-email .button a::after{  
+    position: absolute;
+    content: attr(content);
+    bottom: -25px;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--alt-color);
+    letter-spacing: normal;
+    cursor: initial;
+}
+
+.activation{
+    margin: 5px 0;
+    font-size: 12px;
+    opacity: 0.7;
+    text-align: center;
+}
+
+.activation + hr{
+    width: 500px;
+    margin: 10px auto 20px;
+}
+.alt-link{
+    width: 100%;
+}
+
+.alt-link p{
+    margin: 10px auto;
+    width: fit-content;
+}
+
+.alt-link a{
+    max-width: 70%;
+    margin: auto;
+    display: block;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+.footer .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.footer .container p{
+    margin: 10px auto;
+}
+
+.footer .container a{
+    margin: 30px auto 0;
+    display: block;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .logo img {
+        margin: 10px auto;
+        width: 200px;
+    }
+    .verify{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 35px 0;
+        flex-direction: column;
+    }
+    .or{
+        font-size: 25px;
+        font-weight: bold;
+        margin: 5px 0;
+        color: var(--alt-color);
+    }
+    .v-email .button a::after,
+    .v-code::after{
+        display: none;
+    }
+    .activation + hr{
+        width: 100%;
+    }
+  }
+
+    </style>
+</head>
+
+<body>
+    <span class="preheader" style="display: none !important; visibility: hidden; opacity: 0; color: transparent; height: 0; width: 0;">Preheader text shows up in GMail, iOS, Mail.app, &amp; more: 75 text char limit</span>
+    <div class="mail">
+        <div class="container">
+            <div class="content">
+                <div class="logo">
+                    <img src="http://cdn.mcauto-images-production.sendgrid.net/4f2784850596593c/e884fbd0-837b-4ff1-9402-3eef5bff9c4a/1541x400.png" alt="Ops">
+                </div>
+                <hr>
+                <div class="e-title">
+                    <h3>Confirm Your Email Address</h3>
+                </div>
+                <div class="intro">
+                    <span>Hello</span> <span>Ahmad</span>,
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error incidunt officiis accusantium mollitia illum perspiciatis dignissimos ab, beatae alias itaque. Rem pariatur, quo facere perferendis officiis explicabo distinctio adipisci ipsam?</p>
+                </div>
+                <div class="verify">
+                    <div class="v-code" content="Copy to verify">37484567</div>
+                    <div class="or">OR</div>
+                    <div class="v-email">
+                        <div class="button"><a href="#" content="Tap to verify">Confirm Email</a></div>
+                    </div>
+                </div>
+
+                <p class="activation">The activation code and URL are only valid for one hour</p>
+                <hr>
+                <div class="alt-link">
+                    <p>If link is broken</p>
+                    <a href="https://mohanadnasriya.github.io/Elzero-Page/">https://mohanadnasriya.github.io/Elzero-Page</a>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <p>{{reasonOfEmail}}</p>
+            <p>{{hqAddress}}</p>
+            <a href="#">Unsubscribe - Unsubscribe Preferences</a>
+        </div>
+        <img src="{{}}" alt="" class="track-img">
+
+    </div>
+
+
+</body>
+</html>
